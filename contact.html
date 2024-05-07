@@ -47,33 +47,6 @@
                 <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
                 <button type="submit" class="btn">Send Message</button>
             </form>
-            <?php
-            if ($_SERVER["REQUEST_METHOD"] == "POST") {
-                // Recuperar los datos del formulario
-                $name = $_POST['name'];
-                $email = $_POST['email'];
-                $message = $_POST['message'];
-
-                // Destinatario y asunto del correo
-                $to = "tucorreo@tuempresa.com"; // Cambiar "tucorreo@tuempresa.com" por tu dirección de correo electrónico real de la empresa
-                $subject = "Mensaje de contacto de $name";
-
-                // Cuerpo del correo
-                $body = "Nombre: $name\n";
-                $body .= "Email: $email\n";
-                $body .= "Mensaje:\n$message";
-
-                // Cabeceras del correo
-                $headers = "From: $email";
-
-                // Enviar el correo
-                if (mail($to, $subject, $body, $headers)) {
-                    echo "<script>alert('Mensaje enviado correctamente');</script>";
-                } else {
-                    echo "<script>alert('Hubo un error al enviar el mensaje. Por favor, inténtalo de nuevo más tarde');</script>";
-                }
-            }
-            ?>
         </div>
     
         <div class="social-icons">
