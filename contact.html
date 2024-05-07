@@ -37,7 +37,6 @@
 			<div class="bx bx-menu" id="menu-icon"></div>
 		</div>
 	</header>
-
     <section class="contact">
         <div class="contact-container">
             <h2>Contact Me</h2>
@@ -70,7 +69,9 @@
             const message = document.querySelector('textarea[name="message"]').value;
 
             // Create mailto link
-            const mailtoLink = `mailto:camiloarias.frg@gmail.com?subject=Contact%20Form%20Submission&body=Name:%20${name}%0D%0AEmail:%20${email}%0D%0AMessage:%20${message}`;
+            const subject = encodeURIComponent("Contact Me Portfolio Camilo Arias");
+            const body = encodeURIComponent(message);
+            const mailtoLink = `mailto:camiloarias.frg@gmail.com?subject=${subject}&body=${body}`;
 
             // Open mail client
             window.location.href = mailtoLink;
