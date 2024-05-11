@@ -1,4 +1,4 @@
-/* Estilos generales de reset y estilos base */
+/* General reset styles and base styles */
 
 *{
 	padding: 0;
@@ -9,7 +9,7 @@
 	font-family: "Jost", sans-serif;
 }
 
-/* Definición de variables CSS esto añade los colores principales de texto fondos etc hace que se pueda cambiar facilmente casi toda la web*/
+/* CSS variable definition, this adds the main colors for text, backgrounds, etc., making it easy to change throughout the website */
 :root{
 	--bg-color: #1d1c1b;
 	--text-color: #fff;
@@ -19,15 +19,15 @@
 	--p-font: 1.1rem;
 }
 
-/* Estilos para el cuerpo de la página */
+/* Styles for the body of the page */
 
 body{
 	background: var(--bg-color);
 	color: var(--text-color);
-    
+	
 }
 
-/* Estilos para el encabezado */
+/* Styles for the header */
 
 header{
 	position: fixed;
@@ -42,7 +42,7 @@ header{
 	transition: all .50s ease;
 }
 
-/* Estilos para el logo */
+/* Styles for the logo */
 
 .logo{
 	color: var(--text-color);
@@ -50,7 +50,7 @@ header{
 	font-weight: 700;
 }
 
-/* Estilos para la lista de navegación */
+/* Styles for the navigation list */
 
 .navlist{
 	display: flex;
@@ -72,7 +72,7 @@ header{
 	align-items: center;
 }
 
-/* Estilos para el botón de navegación */
+/* Styles for the navigation button */
 
 .nav-btn{
 	display: inline-block;
@@ -92,7 +92,7 @@ header{
 	border: 2px solid var(--main-color);
 }
 
-/* Estilos para el icono de menú */
+/* Styles for the menu icon */
 
 #menu-icon{
 	font-size: 40px;
@@ -102,7 +102,7 @@ header{
 	display: none;
 }
 
-/* Estilos para las secciones */
+/* Styles for sections */
 
 section{
 	padding: 0px 13% 0px;
@@ -229,106 +229,106 @@ section{
 }
 
 .curriculum{
-    position: relative;
-    height: 100vh;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center; /* Centrar horizontalmente */
-    gap: 3rem;
-    padding-top: 50px;
+	position: relative;
+	height: 100vh;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center; /* Center horizontally */
+	gap: 3rem;
+	padding-top: 50px;
 }
 
 .curriculum embed {
-    width: 80%; /* Ajusta el ancho del elemento embed */
-    height: 80vh; /* Ajusta la altura del elemento embed */
+	width: 80%; /* Adjust the width of the embed element */
+	height: 80vh; /* Adjust the height of the embed element */
 }
 
-/* Estilos para el formulario de contacto */
+/* Styles for the contact form */
 .contact {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh; /* Ajustar según sea necesario */
-    text-align: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	height: 100vh; /* Adjust as needed */
+	text-align: center;
 }
 
 .contact-container {
-    max-width: 600px;
-    width: 100%;
+	max-width: 600px;
+	width: 100%;
 }
 
 .contact h2 {
-    font-size: 2.5rem;
-    margin-bottom: 30px;
-    color: var(--main-color);
+	font-size: 2.5rem;
+	margin-bottom: 30px;
+	color: var(--main-color);
 }
 
 .contact input[type="text"],
 .contact input[type="email"],
 .contact textarea {
-    width: 100%;
-    padding: 15px;
-    margin-bottom: 20px;
-    border: 2px solid var(--other-color);
-    border-radius: 8px;
-    background-color: transparent;
-    color: var(--text-color);
-    font-size: 1rem;
+	width: 100%;
+	padding: 15px;
+	margin-bottom: 20px;
+	border: 2px solid var(--other-color);
+	border-radius: 8px;
+	background-color: transparent;
+	color: var(--text-color);
+	font-size: 1rem;
 }
 
 .contact textarea {
-    resize: vertical;
+	resize: vertical;
 }
 
 .contact button {
-    padding: 15px 30px;
-    background: var(--main-color);
-    color: var(--text-color);
-    font-size: 1rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: .05em;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+	padding: 15px 30px;
+	background: var(--main-color);
+	color: var(--text-color);
+	font-size: 1rem;
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: .05em;
+	border: none;
+	border-radius: 8px;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
 }
 
 .contact button:hover {
-    background-color: #c62828; /* Cambiar color al pasar el ratón */
+	background-color: #c62828; /* Change color on hover */
 }
 
-/* Estilos para los iconos de redes sociales */
+/* Styles for social media icons */
 .contact .social-icons {
-    margin-top: 20px;
+	margin-top: 20px;
 }
 
 .contact .social-icons a {
-    color: var(--text-color);
-    font-size: 1.5rem;
-    margin: 0 10px;
-    transition: color 0.3s ease;
+	color: var(--text-color);
+	font-size: 1.5rem;
+	margin: 0 10px;
+	transition: color 0.3s ease;
 }
 
 .contact .social-icons a:hover {
-    color: var(--main-color);
+	color: var(--main-color);
 }
 
-/* Estilos para la línea del correo electrónico */
+/* Styles for the email line */
 .contact-email {
-    margin-top: 20px;
-    color: var(--other-color);
-    font-size: 1rem;
+	margin-top: 20px;
+	color: var(--other-color);
+	font-size: 1rem;
 }
 
 .contact-email:before {
-    content: "Email: ";
-    font-weight: bold;
+	content: "Email: ";
+	font-weight: bold;
 }
 
-/* Media queries para ajustar estilos en diferentes tamaños de pantalla */
+/* Media queries to adjust styles for different screen sizes */
 
 
 @media(max-width:1800px){
@@ -342,13 +342,13 @@ section{
 @media(max-width:1510px){
 	:root{
 		--h1-font: 4.2rem;
-	    --p-font: 1rem;
+		--p-font: 1rem;
 	}
 	.hero-img img{
 		max-width: 540px;
-	    width: 100%;
-	    height: 100%;
-	    object-fit: contain;
+		width: 100%;
+		height: 100%;
+		object-fit: contain;
 	}
 }
 @media(max-width:1330px){
@@ -363,9 +363,9 @@ section{
 	}
 	.hero-img img{
 		max-width: 500px;
-	    width: 100%;
-	    height: 100%;
-	    object-fit: contain;
+		width: 100%;
+		height: 100%;
+		object-fit: contain;
 	}
 }
 
@@ -385,8 +385,8 @@ section{
 		flex-direction: column;
 		padding-top: 150px;
 		transition: all .6s ease;
-        background-color: #1c1919;
-        opacity: 0.9;
+		background-color: #1c1919;
+		opacity: 0.9;
 	}
 	.navlist a{
 		display: block;
@@ -447,4 +447,3 @@ section{
 		font-size: 23px;
 	}
 }
-

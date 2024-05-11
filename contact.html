@@ -6,16 +6,16 @@
     <title>PORTFOLIO - CAMILO ARIAS</title>
     <link rel="stylesheet" type="text/css" href="style.css">
 
-    <!--- box icons link --->
+    <!-- Link to box icons -->
     <link rel="stylesheet"
     href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
 
-    <!--- remix icons link --->
+    <!-- Link to remix icons -->
     <link
     href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
     rel="stylesheet"/>
 
-    <!--- google fonts link --->
+    <!-- Link to Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
@@ -27,24 +27,24 @@
 </head>
 <body>
 
-	<header>    
-		<a href="./index.html" class="logo">Portfolio</a>
+    <header>    
+        <a href="./index.html" class="logo">Portfolio</a>
 
-		<ul class="navlist">
-			<li><a href="./index.html">Home</a></li>
-			<li><a href="./curriculum.html">Curriculum</a></li>
-			<li><a href="./skills.html">Skills</a></li>
-			<li><a href="./about.html">About Me</a></li>
-		</ul>
+        <ul class="navlist">
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./curriculum.html">Curriculum</a></li>
+            <li><a href="./skills.html">Skills</a></li>
+            <li><a href="./about.html">About</a></li>
+        </ul>
 
-		<div class="nav-right">
-			<a href="./contact.html" class="nav-btn">Hire Me!</a>
-			<div class="bx bx-menu" id="menu-icon"></div>
-		</div>
-	</header>
+        <div class="nav-right">
+            <a href="./contact.html" class="nav-btn">Hire Me!</a>
+            <div class="bx bx-menu" id="menu-icon"></div>
+        </div>
+    </header>
     <section class="contact">
         <div class="contact-container">
-            <h2>Contact Me</h2>
+            <h2>Contact</h2>
             <form id="form" action="#" method="post">
                 <input type="text" name="name" placeholder="Your Name" required>
                 <input type="email" name="email" placeholder="Your Email" required>
@@ -74,11 +74,11 @@
             const message = document.querySelector('textarea[name="message"]').value;
 
             // Create mailto link
-            const subject = encodeURIComponent("Contact Me Portfolio Camilo Arias");
+            const subject = encodeURIComponent("Contact from Portfolio Camilo Arias");
             const body = encodeURIComponent(message);
             const mailtoLink = `mailto:camiloarias.frg@gmail.com?subject=${subject}&body=${body}`;
 
-            // Open mail client
+            // Open email client
             window.location.href = mailtoLink;
         }
     </script>
