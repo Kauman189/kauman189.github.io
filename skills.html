@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>PORTFOLIO - CAMILO ARIAS</title>
     <link rel="stylesheet" type="text/css" href="style.css">
-
     <!-- Links to boxicons icons -->
     <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
 
@@ -22,6 +21,12 @@
       <meta name="description" content="Portfolio of Camilo Arias, a web developer from Spain.">
       <meta name="keywords" content="portfolio, web developer, Camilo Arias, Spain">
       <meta name="author" content="Camilo Arias">
+
+    <!-- Carrousel links -->
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+      <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet"><link rel="stylesheet" href="./style.css">
+      
 
 </head>
 <body>
@@ -44,28 +49,30 @@
         </div>
     </header> 
 
-    <!-- Hero section -->
+    <!-- Carrousel -->
     <section class="hero">
-        <div class="hero-text">
-            <!-- Title and skill descriptions -->
-            <h1>My <span>Skills</span></h1><br>
-            <h6><span>Front-end Development:</span> HTML, CSS, JavaScript</h6>
-            <p>In my journey as a junior front-end developer, I have focused on mastering fundamental technologies like HTML, CSS, and JavaScript. I am committed to continuous learning and improving my web development skills.</p>
-            <h6><span>Responsive Design:</span> Adaptability</h6>
-            <p>I specialize in implementing responsive design to ensure that my web applications are accessible and functional on different devices and screen sizes. I prioritize adaptability and user experience in my projects.</p>
-            <h6><span>Version Control:</span> Git</h6>
-            <p>I use Git as a version control tool to collaborate effectively on team projects and maintain a clear history of code changes. I am familiar with concepts like repositories, branches, and merges.</p>
-            <h6><span>Problem Solving:</span> Debugging</h6>
-            <p>I have strong problem-solving skills and excel in code debugging. I enjoy tackling challenges and finding efficient solutions to optimize the performance and functionality of web applications.</p>
-        </div>    
-    
-        <!-- Image -->
-        <div class="hero-img">
-            <img  style="border-radius: 100px; width: 500px;" src="img/skills.png">
+            <div class="title-container">
+                <h1 class="mobile-title">Proyects</h1>
+            </div>
+            <div id="hey" class="element_pre ">
+            <div class="element">
+            <div class="element__caroussel">
+                <div class="middle" data-pos="middle"><a href="./about.html"><img src="./img/maxresdefault-2.jpg" alt="" /></a></div>
+                <div class="left" data-pos="left"><a href="./about.html"><img src="./img/real-estate-developer-checking-work-of-building-illustration-concept-flat-illustration-isolated-on-white-background-vector.jpg" alt="" /></a></div>
+                <div class="right" data-pos="right"><a href="./about.html"><img src="./img/real-estate-developer-checking-work-of-building-illustration-concept-flat-illustration-isolated-on-white-background-vector.jpg" alt="" /></a></div> </div>
+            <div class="element__description">
+                <h3>Proyects</h3>
+                <p>My Projects</p>
+                <p>This is my projects using my technologies. Check out the Technologies I used here <i class="ri-arrow-down-line"></i></p>
+                <a href="#" title="#">Technologies</a>
+            </div>
+        
+            </div>
         </div>
-    </section>
-    
+    </section>  
+
     <!-- Scripts -->
+    <script src="./script.js"></script>
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
     <script type="text/javascript">
         // Dropdown menu control
