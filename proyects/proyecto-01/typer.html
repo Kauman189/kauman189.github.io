@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Typer - Kauman189</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="./script.js"></script>
+</head>
+<body>
+  <div id="logo">
+    <h1>Typer</h1>
+    <h2>By <a href="../../index.html"> Kauman189</a></h2>
+  </div>
+  <div id="disclaimer">
+  <h2>Disclaimer</h2>
+  <p>This is a test project, it is not recommended for production use. <br>
+    I made this to get better whit my JS HTML AND CSS knowledge. <br>
+    Feel free to explore and experiment with the code and expand.
+  </p>
+  </div>
+  <div id="wordToType"></div>
+  <button id="startButton">Start</button>
+    <article id="customAlert" data-glow>
+      <div>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6"></svg>
+        <path fill-rule="evenodd" d="M14.447 3.026a.75.75 0 0 1 .527.921l-4.5 16.5a.75.75 0 0 1-1.448-.394l4.5-16.5a.75.75 0 0 1 .921-.527ZM16.72 6.22a.75.75 0 0 1 1.06 0l5.25 5.25a.75.75 0 0 1 0 1.06l-5.25 5.25a.75.75 0 1 1-1.06-1.06L21.44 12l-4.72-4.72a.75.75 0 0 1 0-1.06Zm-9.44 0a.75.75 0 0 1 0 1.06L2.56 12l4.72 4.72a.75.75 0 0 1-1.06 1.06L.97 12.53a.75.75 0 0 1 0-1.06l5.25-5.25a.75.75 0 0 1 1.06 0Z" clip-rule="evenodd" />
+      </svg>
+      <h2>Score</h2>
+      <span>Typper Kauman189</span>
+      </div>
+      <hr>
+      <span id="WPMAndErrors"></span><span id="wpmDisplay"></span>
+    </article>
+    <button id="closeAlert">Close</button>
+    
+  <input type="text" id="userInput">
+  <div id="timer"></div>
+  <button id="resetButton">Reset</button>
+  <div id="errorCount"></div>
+  
+  
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</body>
+</html>

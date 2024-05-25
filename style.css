@@ -13,7 +13,7 @@
 :root{
 	--bg-color: #1d1c1b;
 	--text-color: #fff;
-	--main-color: #2072ff;
+	--main-color: #84acbc;
 	--other-color: #858585;
 	--h1-font: 5rem;
 	--p-font: 1.1rem;
@@ -132,7 +132,8 @@ section{
 	width: 100%;
 	height: 100%;
 	object-fit: contain;
-	;
+	margin-top: 40px;
+	border-radius: 20px;
 }
 .hero-text h1{
 	font-size: var(--h1-font);
@@ -438,7 +439,7 @@ section{
 				margin-left:25%;
   
 				z-index:5;
-				cursor:default;
+				cursor:grab;
 			  }
 				  .element__caroussel div.middle img{
 					margin-left:0%;
@@ -471,7 +472,7 @@ section{
 				  }
   
   
-  
+				  
   
   
   
@@ -650,7 +651,7 @@ section{
 	}
 	.hero-img{
 		margin: auto;
-		margin-top: 70px;
+		margin-top: 20px;
 	}
 	.hero-btn{
 		display: flex;
