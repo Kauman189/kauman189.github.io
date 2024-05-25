@@ -169,7 +169,7 @@ article > div {
 /* Article horizontal rule styles */
 article hr {
   grid-column: 1 / -1;
-  mask: linear-gradient(90deg, transparent, white 15% 85%, transparent);
+  mask: linear-gradient(90deg, transparent, rgb(109, 36, 36) 15% 85%, transparent);
   width: 100%;
 }
 
@@ -189,11 +189,10 @@ article > span {
   height: 50px; /* Make sure the span has a height. Otherwise, it won't vertically center */
 }
 
-/* Article SVG styles */
-article svg {
-  grid-row: span 2;
-  width: 48px;
-  color: hsl(var(--hue) calc(var(--sat, 0) * 1%) 50%);
+.score-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 /* Article first span styles */
