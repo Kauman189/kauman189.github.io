@@ -334,3 +334,58 @@ button {
   background-color: #000;
   color: #fff;
 }
+
+/* Estilos globales */
+
+/* ... Código CSS existente ... */
+
+/* Estilos para dispositivos móviles */
+@media only screen and (max-width: 600px) {
+  body {
+    max-width: 100%; /* Cambiar el ancho máximo para ocupar todo el espacio disponible */
+  }
+
+  /* Ajustes para el logo */
+  #logo {
+    width: 90%; /* Reducir el ancho del logo para que se ajuste a pantallas más pequeñas */
+    height: auto; /* Ajustar la altura automáticamente para mantener la proporción */
+    margin: 20px auto; /* Agregar espacio alrededor del logo */
+  }
+
+  /* Ajustes para el botón de inicio */
+  #startButton {
+    width: 90%; /* Reducir el ancho del botón para que se ajuste a pantallas más pequeñas */
+    margin: 10px auto; /* Agregar espacio alrededor del botón */
+  }
+
+  /* Ajustes para el botón de reinicio */
+  #resetButton {
+    width: 90%; /* Reducir el ancho del botón para que se ajuste a pantallas más pequeñas */
+    margin: 10px auto; /* Agregar espacio alrededor del botón */
+  }
+
+  /* Ajustes para el campo de entrada de usuario */
+  #userInput {
+    width: 90%; /* Reducir el ancho del campo de entrada para que se ajuste a pantallas más pequeñas */
+    max-width: none; /* Eliminar el ancho máximo para permitir que el campo se expanda completamente */
+    margin: 10px auto; /* Agregar espacio alrededor del campo */
+  }
+
+  /* Ajustes para el texto del logotipo */
+  #logo h1 {
+    font-size: 2rem; /* Reducir el tamaño del texto del logotipo para pantallas más pequeñas */
+  }
+
+  /* Ajustes para el texto secundario del logotipo */
+  #logo h2 {
+    font-size: 1rem; /* Reducir el tamaño del texto secundario del logotipo para pantallas más pequeñas */
+  }
+
+  /* Ajustes para el aviso legal */
+  #disclaimer {
+    width: 90%; /* Reducir el ancho del aviso legal para que se ajuste a pantallas más pequeñas */
+    height: auto; /* Ajustar la altura automáticamente para mantener la proporción */
+    margin: 20px auto; /* Agregar espacio alrededor del aviso legal */
+  }
+}
+
