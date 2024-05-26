@@ -660,7 +660,7 @@ section{
 	.hero-btn{
 		display: flex;
 		align-items: center;
-		justify-content: center;
+		padding-left: 7%;
 	}
 	.element__description{
 		display: none;
