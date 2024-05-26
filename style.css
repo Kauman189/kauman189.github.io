@@ -112,6 +112,7 @@ section{
 	height: 100vh;
 	width: 100%;
 	display: flex;
+	flex-wrap: wrap;
 	align-items: center;
 	justify-content: space-between;
 	gap: 3rem;
@@ -526,6 +527,9 @@ section{
 		animation:caroussel_hidden--up ease-out .3s .3s forwards;
 	  }
   
+	  .proyects-list{
+		display: none;
+	  }
   
 	  @keyframes caroussel_hidden--down {
 		from {
@@ -688,4 +692,134 @@ section{
 	.hero-text h4{
 		font-size: 23px;
 	}
+	.element__caroussel{
+		display: none;
+	  }
+	.proyects-list{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
 }
+
+
+
+.proyects-list li{
+	display: grid;
+	font-size: 1.2rem;
+	padding: 10px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	background-color: #84acbc;
+	margin: 20px;
+	justify-content: center; 
+}
+
+.proyects-list li a{
+	color: #fefefe;
+}
+.proyects-list li {
+	display: grid;
+	font-size: 1.2rem;
+	padding: 10px;
+	border: 1px solid #84acbc;
+	border-radius: 5px;
+	background-color: #171212;
+	margin: 20px;
+	justify-content: center;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Aumenta el tamaño de la sombra */
+	transition: opacity 0.6s ease;
+}
+
+.proyects-list li:hover {
+	opacity: 1;
+	box-shadow: 0 4px 8px rgba(247, 247, 247, 0.1);
+}
+
+.proyects-list ul:hover li:not(:hover) {
+	opacity: 0.5;
+}
+
+
+
+
+div#app-techs {
+
+      input {
+        padding: 4px 12px;
+        color: rgba(0,0,0,.70);
+        border: 1px solid rgba(0,0,0,.12);
+        transition: .15s all ease-in-out;
+        background: white;
+        &:focus {
+          outline: none;
+          transform: scale(1.05);
+          & + label  {
+            font-size: 10px;
+            transform: translateY(-24px) translateX(-12px);
+          }
+        }
+        &::-webkit-input-placeholder {
+            font-size: 12px;
+            color: rgba(0,0,0,.50);
+            font-weight: 100;
+        }
+      }
+    }
+
+    .wrapper {
+		margin-top: 50px;
+		display: flex;
+		flex-wrap: wrap;
+		max-width: 100%; /* Asegura que .wrapper no se desborde fuera de la ventana del navegador */
+		padding-top: 12px;
+	  }
+
+
+	  .card img {
+		max-width: 80%;
+		height: auto;
+	  }
+
+    .card {
+      box-shadow: rgba(0, 0, 0, 0.118) 0px 1px 6px, rgba(0, 0, 0, 0.118) 0px 1px 4px;
+      max-width: 300px;
+      margin: 2px;
+      transition: .15s all ease-in-out;
+      &:hover {
+        transform: scale(1.1);
+      }
+      a {
+        text-decoration: none;
+        padding: 12px;
+        color: #ffffff;
+        font-size: 24px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        img {
+          height: 200px;
+        }
+        small {
+          font-size: 10px;
+          padding: 4px;
+        }
+      }
+    }
+
+	@media (max-width: 1200px) {
+		.card {
+			max-width: 45%; /* Ajusta según sea necesario */
+		}
+	}
+	
+	@media (max-width: 768px) {
+		.card {
+			max-width: 100%; /* Ajusta según sea necesario */
+		}
+	}
+	
+  
+  
+  

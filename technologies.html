@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Document Configuration -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>PORTFOLIO - CAMILO ARIAS</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <!-- Boxicons Icons -->
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+
+    <!-- Remix Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet"/>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <!-- SEO -->
+    <meta name="description" content="Portfolio of Camilo Arias, a web developer from Spain.">
+    <meta name="keywords" content="portfolio, web developer, Camilo Arias, Spain">
+    <meta name="author" content="Camilo Arias">
+</head>
+<body>
+
+    <!-- Header -->
+    <header>    
+        <!-- Logo and Navigation Links -->
+        <a href="./index.html" class="logo">Portfolio</a>
+        <ul class="navlist">    
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./curriculum.html">Curriculum</a></li>
+            <li><a href="./projects.html">Projects</a></li>
+            <li><a href="technologies.html">Skills</a></li>
+        </ul>
+
+        <!-- Hire Me Button and Dropdown Menu -->
+        <div class="nav-right">
+            <a href="./contact.html" class="nav-btn">Hire Me!</a>
+            <div class="bx bx-menu" id="menu-icon"></div>
+        </div>
+    </header>
+    <section class="hero">
+        <div id="app-techs">
+            <div class="wrapper">
+              <div class="card" v-for="post in filteredList">
+                <a v-bind:href="post.link" target="_blank">
+                  <img src="./img/html-5-svgrepo-com.svg"/>
+                  <small>Front</small>
+                  HTML
+                </a>
+              </div>
+            </div>
+          </div>
+          <div id="app-techs">
+            <div class="wrapper">
+              <div class="card" v-for="post in filteredList">
+                <a v-bind:href="post.link" target="_blank">
+                  <img src="./img/js-svgrepo-com.svg"/>
+                  <small>Front</small>
+                  JavaScript
+                </a>
+              </div>
+            </div>
+          </div>
+          <div id="app-techs">
+            <div class="wrapper">
+              <div class="card" v-for="post in filteredList">
+                <a v-bind:href="post.link" target="_blank">
+                  <img src="./img/react-svgrepo-com.svg"/>
+                  <small>Front</small>
+                  React
+                </a>
+              </div>
+            </div>
+          </div>
+          <div id="app-techs">
+            <div class="wrapper">
+              <div class="card" v-for="post in filteredList">
+                <a v-bind:href="post.link" target="_blank">
+                  <img src="./img/node2-svgrepo-com.svg"/>
+                  <small>Front</small>
+                  Node.js
+                </a>
+              </div>
+            </div>
+          </div>
+          <div id="app-techs">
+            <div class="wrapper">
+              <div class="card" v-for="post in filteredList">
+                <a v-bind:href="post.link" target="_blank">
+                  <img src="./img/php-svgrepo-com.svg"/>
+                  <small>Back</small>
+                  PHP
+                </a>
+              </div>
+            </div>
+          </div>
+          <div id="app-techs">
+            <div class="wrapper">
+              <div class="card" v-for="post in filteredList">
+                <a v-bind:href="post.link" target="_blank">
+                  <img src="./img/mysql-svgrepo-com-2.svg"/>
+                  <small>Back</small>
+                  MYSQL
+                </a>
+              </div>
+            </div>
+          </div>
+          <div id="app-techs">
+            <div class="wrapper">
+              <div class="card" v-for="post in filteredList">
+                <a v-bind:href="post.link" target="_blank">
+                  <img src="./img/git-svgrepo-com.svg"/>
+                  <small>Back</small>
+                  GIT
+                </a>
+              </div>
+            </div>
+          </div>
+    </section> 
+   
+    </header>  
