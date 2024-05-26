@@ -701,6 +701,7 @@ section{
         align-items: center;
         justify-content: center;
     }
+	
 }
 
 
@@ -745,6 +746,8 @@ section{
 
 
 div#app-techs {
+	align-items: center;
+
 
       input {
         padding: 4px 12px;
@@ -816,10 +819,18 @@ div#app-techs {
 	
 	@media (max-width: 768px) {
 		.card {
-			max-width: 100%; /* Ajusta según sea necesario */
+		  max-width: 100%; /* Ajusta según sea necesario */
+		  align-self: center; /* Centra la tarjeta individualmente */
+		  margin-left: 75px;
 		}
-	}
-	
+	  
+		/* Asume que el contenedor de las tarjetas tiene la clase .card-container */
+		.card-container {
+		  display: flex;
+		  justify-content: center;
+		  align-items: center; /* Centra las tarjetas verticalmente */
+		  flex-wrap: wrap;
+		}
+	  }
   
-  
-  
+	  
