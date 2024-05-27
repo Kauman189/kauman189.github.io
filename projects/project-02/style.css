@@ -125,7 +125,7 @@ model-viewer {
 
 .logo h1 {
     font-family: 'Kamikaze3DGradient', fallback; /* Reemplaza 'fallback' con la fuente de respaldo que desees usar */
-    font-size: 16rem; /* Ajusta el tamaño de la fuente del logo */
+    font-size: 14rem; /* Ajusta el tamaño de la fuente del logo */
     text-transform: uppercase; /* Convierte el texto a mayúsculas */
     color: #ffffff; /* Cambia el color del texto a blanco */
     background: linear-gradient(to right, #0c0c0c, #242428); /* Agrega un degradado de color al fondo del texto */
