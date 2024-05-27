@@ -17,22 +17,54 @@
     font-family: 'VT323', monospace;
     box-sizing: border-box; /* Asegura que el padding y border se incluyan en el tamaño total */
 }
-
 body {
     font-family: 'VT323', monospace;
     background: #d9d9db;
     display: flex;
-    flex-direction: column; /* Cambiado a columna para apilar elementos verticalmente */
-    justify-content: space-between; /* Espacio entre elementos */
+    flex-direction: column;
     align-items: center;
-    min-height: 100vh;
     font-size: 14px;
     position: relative;
     width: 100%;
-    margin: 0;
-    padding: 0;
     text-align: center;
+    box-sizing: border-box;
 }
+
+@media (max-width: 600px) {
+    body {
+        padding: 50px 20px;
+    }
+}
+.about-us {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centra los elementos a lo largo del eje principal */
+    margin-top: 50px;
+    padding: 20px;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+.about-us h1 {
+    font-family: 'Kamikaze', sans-serif;
+    font-size: 4rem;
+    margin-bottom: 60px;
+}
+
+.about-us p {
+    font-size: var(--p-font);
+    font-family: 'VT323', italic;
+    line-height: 1.6;
+    font-size: 20px;
+    margin-bottom: 20px;
+    height: auto;
+}   
+
+model-viewer {
+    width: 100%;
+    height: 300px;
+    margin-bottom: 10px;
+  } 
 
 /* Open button */
 .trigger {
@@ -47,7 +79,7 @@ body {
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
     transition: 0.15s ease-in-out;
     cursor: pointer;
-	margin-bottom: 10rem;
+	margin-bottom: 2rem;
 }
 .trigger:hover {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
@@ -93,7 +125,7 @@ body {
 
 .logo h1 {
     font-family: 'Kamikaze3DGradient', fallback; /* Reemplaza 'fallback' con la fuente de respaldo que desees usar */
-    font-size: 15rem; /* Ajusta el tamaño de la fuente del logo */
+    font-size: 16rem; /* Ajusta el tamaño de la fuente del logo */
     text-transform: uppercase; /* Convierte el texto a mayúsculas */
     color: #ffffff; /* Cambia el color del texto a blanco */
     background: linear-gradient(to right, #0c0c0c, #242428); /* Agrega un degradado de color al fondo del texto */
@@ -190,25 +222,85 @@ ul li a i {
 }
 
 /* Responsive design */
-@media (max-width: 768px) {
-    .logo h1 {
-        font-size: 5rem; /* Reduce el tamaño del logo en pantallas más pequeñas */
-    }
 
-    .trigger {
-        font-size: 1.5rem; /* Ajusta el tamaño del botón en pantallas más pequeñas */
-    }
 
-    ul li a {
-        font-size: 1.5em; /* Ajusta el tamaño de los enlaces en pantallas más pequeñas */
-    }
+.goback {
+    background-color: #1f1f1f; /* Color de fondo */
+    border: none; /* Sin bordes */
+    color: white; /* Color del texto */
+    padding: 15px 32px; /* Espaciado interno */
+    text-align: center; /* Alineación del texto */
+    text-decoration: none; /* Sin decoración de texto */
+    display: inline-block; /* Display inline-block */
+    font-size: 16px; /* Tamaño de la fuente */
+    margin: 4px 2px; /* Margen */
+    cursor: pointer; /* Cursor de mano al pasar el ratón */
+    transition-duration: 0.4s; /* Duración de la transición */
+    padding: 10px 20px; /* Reduce el padding aquí */
+    font-size: 14px; /* Reduce el tamaño de la fuente aquí */
+    
+}
 
-    .logo-content-container {
-        gap: 1rem; /* Reduce el espacio entre elementos en pantallas más pequeñas */
-    }
+.goback:hover {
+    background-color: #000000; /* Color de fondo al pasar el ratón */
+}
+.goback {
+    position: relative; /* Posición fija */
+    bottom: 0; /* Pegado al final de la página */
+    right: 0; /* Pegado al lado derecho de la página */
+    background-color: #1f1f1f; /* Color de fondo */
+    text-align: center; /* Alineación del texto */
+    text-decoration: none; /* Sin decoración de texto */
+}
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr); /* En pantallas pequeñas, solo muestra una columna */
+    gap: 20px;
+    padding: 20px;
+}
 
-    .footer-main {
-        padding: 0.5rem; /* Reduce el padding del footer en pantallas más pequeñas */
-        font-size: 1rem; /* Reduce el tamaño de la fuente en el footer en pantallas más pequeñas */
+@media (min-width: 600px) {
+    .testimonials-grid {
+        grid-template-columns: repeat(2, 1fr); /* En pantallas medianas, muestra dos columnas */
+    }
+}
+
+@media (min-width: 900px) {
+    .testimonials-grid {
+        grid-template-columns: repeat(4, 1fr); /* En pantallas grandes, muestra tres columnas */
+    }
+}
+
+.testimonials-grid {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden; /* Oculta las tarjetas que no están en el centro */
+}
+
+
+.testimonial-card img {
+    width: 500px; /* Ajusta el ancho de la imagen al ancho de la tarjeta */
+    height: auto; /* Permite que la altura se ajuste automáticamente para mantener las proporciones de la imagen */
+}
+
+.testimonial-card p {
+    font-size: 3rem; /* Ajusta el tamaño del texto */
+    padding: 20px; /* Añade espacio alrededor del texto */
+    text-align: center; /* Centra el texto */
+
+}
+
+.testimonial-card {
+    transition: transform 1s; /* Añade una transición para la transformación */
+}
+
+@media (max-width: 600px) {
+    body {
+        margin-top: 20px; /* Añade un margen en la parte superior */
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between; /* Distribuye el espacio de manera uniforme entre los elementos */
+        min-height: 100vh; /* Asegura que el cuerpo de la página tenga al menos la altura de la ventana del navegador */
     }
 }
