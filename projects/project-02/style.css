@@ -296,21 +296,14 @@
         transition: transform 1s; /* Añade una transición para la transformación */
     }
 
-    @media (max-width: 600px) {
+       /* Estilos para dispositivos móviles */
+       @media (min-width: 800px) {
         body {
-            margin-top: 20px; /* Añade un margen en la parte superior */
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between; /* Distribuye el espacio de manera uniforme entre los elementos */
-            min-height: 100vh; /* Asegura que el cuerpo de la página tenga al menos la altura de la ventana del navegador */
+            font-size: 12px; /* Reduce el tamaño de la fuente */
+            padding: 10px; /* Reduce el relleno */
         }
-    }
 
-    @media (max-width: 600px) {
-        body {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between; /* Distribuye el espacio de manera uniforme entre los elementos */
-            height: 100vh; /* Asegura que el cuerpo de la página tenga al menos la altura de la ventana del navegador */
-        }
+        .goback{
+            font-size: 3rem; /* Reduce el tamaño del botón */
+        }        
     }
