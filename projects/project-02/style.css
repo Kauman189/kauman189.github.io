@@ -102,7 +102,6 @@ body {
 	-webkit-text-fill-color: transparent; /* Hace que el texto sea transparente para que se muestre el degradado de color */
     word-break: break-word; /* Permite que las palabras se rompan si son muy largas */
     margin: 0;
-    padding: 1rem;
 }
 
 .logo h2 {
