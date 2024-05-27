@@ -1,306 +1,316 @@
-@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
 
-@font-face {
-    font-family: 'Kamikaze';
-    src: url('./media/Kamikaze.ttf');
-}
+    @font-face {
+        font-family: 'Kamikaze';
+        src: url('./media/Kamikaze.ttf');
+    }
 
-@font-face {
-    font-family: 'Kamikaze3DGradient';
-    src: url('./media/Kamikaze3DGradient.ttf');
-}
+    @font-face {
+        font-family: 'Kamikaze3DGradient';
+        src: url('./media/Kamikaze3DGradient.ttf');
+    }
 
-/* General styles */
-* {
-    margin: 0;
-    padding: 0;
-    font-family: 'VT323', monospace;
-    box-sizing: border-box; /* Asegura que el padding y border se incluyan en el tamaño total */
-}
-body {
-    font-family: 'VT323', monospace;
-    background: #d9d9db;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-size: 14px;
-    position: relative;
-    width: 100%;
-    text-align: center;
-    box-sizing: border-box;
-}
-
-@media (max-width: 600px) {
+    /* General styles */
+    * {
+        margin: 0;
+        padding: 0;
+        font-family: 'VT323', monospace;
+        box-sizing: border-box; /* Asegura que el padding y border se incluyan en el tamaño total */
+    }
     body {
-        padding: 50px 20px;
-    }
-}
-.about-us {
-    display: flex;
-    flex-direction: column;
-    justify-content: center; /* Centra los elementos a lo largo del eje principal */
-    margin-top: 50px;
-    padding: 20px;
-    background-color: var(--bg-color);
-    color: var(--text-color);
-}
-
-.about-us h1 {
-    font-family: 'Kamikaze', sans-serif;
-    font-size: 4rem;
-    margin-bottom: 60px;
-}
-
-.about-us p {
-    font-size: var(--p-font);
-    font-family: 'VT323', italic;
-    line-height: 1.6;
-    font-size: 20px;
-    margin-bottom: 20px;
-    height: auto;
-}   
-
-model-viewer {
-    width: 100%;
-    height: 300px;
-    margin-bottom: 10px;
-  } 
-
-/* Open button */
-.trigger {
-    background: #000000;
-    outline: 0;
-    padding: 8px 15px;
-    color: #fff;
-    border: 0;
-    border-radius: 5px;
-    font-size: 5rem;
-	border-radius: 10px;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
-    transition: 0.15s ease-in-out;
-    cursor: pointer;
-	margin-bottom: 2rem;
-}
-.trigger:hover {
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
-}
-
-/* Nav position and opening class */
-.full-screen-nav {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    transition: 0.2s ease-in-out;
-    display: none;
-}
-
-.open-nav {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-/* Logo content container */
-.logo-content-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    width: 100%; /* Asegura que el contenedor ocupe todo el ancho */
-    gap: 3rem;
-    padding: 1rem; /* Asegura que haya espacio en los bordes en móviles */
-    text-align: center;
-}
-
-.logo {
-    flex: 1; /* Ocupa espacio en la parte superior */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-	flex-direction: column;
-}
-
-.logo h1 {
-    font-family: 'Kamikaze3DGradient', fallback; /* Reemplaza 'fallback' con la fuente de respaldo que desees usar */
-    font-size: 14rem; /* Ajusta el tamaño de la fuente del logo */
-    text-transform: uppercase; /* Convierte el texto a mayúsculas */
-    color: #ffffff; /* Cambia el color del texto a blanco */
-    background: linear-gradient(to right, #0c0c0c, #242428); /* Agrega un degradado de color al fondo del texto */
-	-webkit-background-clip: text; /* Permite que el degradado de color se aplique solo al texto */
-	background-clip: text; /* Define el recorte del fondo solo para el texto */
-	-webkit-text-fill-color: transparent; /* Hace que el texto sea transparente para que se muestre el degradado de color */
-    word-break: break-word; /* Permite que las palabras se rompan si son muy largas */
-    margin: 0;
-}
-
-.logo h2 {
-    font-size: 4rem;
-}
-
-.button-container {
-    flex: 1; /* Ocupa espacio en el medio */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.footer-main {
-    flex: 1; /* Ocupa espacio en la parte inferior */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    text-align: center;
-    background-color: #000000;
-    color: #ffffff;
-    padding: 1rem;
-}
-
-/* Backdrop position and animation */
-.backdrop {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.92);
-    cursor: pointer;
-    animation: fadeIn 0.8s ease-in-out forwards;
-}
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-/* List item styling & animation */
-ul {
-    z-index: 9999;
-    position: relative;
-    padding: 1rem; /* Asegura que haya espacio en los bordes en móviles */
-	font-size: 2rem;
-}
-ul li {
-    list-style: none;
-    text-align: center;
-    margin-bottom: 30px;
-    animation: 1s ease-in-out animateList forwards;
-}
-ul li:last-child {
-    margin-bottom: 0;
-}
-@keyframes animateList {
-    from {
-        margin-top: -60px;
-        opacity: 0;
-    }
-    to {
-        margin-top: 0;
-        opacity: 1;
-    }
-}
-
-/* Item links styles and hover effect */
-ul li a {
-    text-decoration: none;
-    color: #ccc;
-    font-size: 2em;
-    font-weight: 900;
-    text-transform: uppercase;
-    transition: 0.40s ease-in-out;
-}
-ul li a:hover,
-ul li a i {
-    color: #ffffff;
-}
-
-/* Responsive design */
-
-
-.goback {
-    background-color: #1f1f1f; /* Color de fondo */
-    border: none; /* Sin bordes */
-    color: white; /* Color del texto */
-    padding: 15px 32px; /* Espaciado interno */
-    text-align: center; /* Alineación del texto */
-    text-decoration: none; /* Sin decoración de texto */
-    display: inline-block; /* Display inline-block */
-    font-size: 16px; /* Tamaño de la fuente */
-    margin: 4px 2px; /* Margen */
-    cursor: pointer; /* Cursor de mano al pasar el ratón */
-    transition-duration: 0.4s; /* Duración de la transición */
-    padding: 10px 20px; /* Reduce el padding aquí */
-    font-size: 14px; /* Reduce el tamaño de la fuente aquí */
-    
-}
-
-.goback:hover {
-    background-color: #000000; /* Color de fondo al pasar el ratón */
-}
-.goback {
-    position: relative; /* Posición fija */
-    bottom: 0; /* Pegado al final de la página */
-    right: 0; /* Pegado al lado derecho de la página */
-    background-color: #1f1f1f; /* Color de fondo */
-    text-align: center; /* Alineación del texto */
-    text-decoration: none; /* Sin decoración de texto */
-}
-.testimonials-grid {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr); /* En pantallas pequeñas, solo muestra una columna */
-    gap: 20px;
-    padding: 20px;
-}
-
-@media (min-width: 600px) {
-    .testimonials-grid {
-        grid-template-columns: repeat(2, 1fr); /* En pantallas medianas, muestra dos columnas */
-    }
-}
-
-@media (min-width: 900px) {
-    .testimonials-grid {
-        grid-template-columns: repeat(4, 1fr); /* En pantallas grandes, muestra tres columnas */
-    }
-}
-
-.testimonials-grid {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    overflow: hidden; /* Oculta las tarjetas que no están en el centro */
-}
-
-
-.testimonial-card img {
-    width: 500px; /* Ajusta el ancho de la imagen al ancho de la tarjeta */
-    height: auto; /* Permite que la altura se ajuste automáticamente para mantener las proporciones de la imagen */
-}
-
-.testimonial-card p {
-    font-size: 3rem; /* Ajusta el tamaño del texto */
-    padding: 20px; /* Añade espacio alrededor del texto */
-    text-align: center; /* Centra el texto */
-
-}
-
-.testimonial-card {
-    transition: transform 1s; /* Añade una transición para la transformación */
-}
-
-@media (max-width: 600px) {
-    body {
-        margin-top: 20px; /* Añade un margen en la parte superior */
+        font-family: 'VT323', monospace;
+        background: #d9d9db;
         display: flex;
         flex-direction: column;
-        justify-content: space-between; /* Distribuye el espacio de manera uniforme entre los elementos */
-        min-height: 100vh; /* Asegura que el cuerpo de la página tenga al menos la altura de la ventana del navegador */
+        align-items: center;
+        font-size: 14px;
+        position: relative;
+        width: 100%;
+        text-align: center;
+        box-sizing: border-box;
+        height: 100vh; /* Set the height to 100% of the viewport height */
+        margin: 0; /* Remove default margin */
     }
-}
+
+
+    .about-us {
+        display: flex;
+        flex-direction: column;
+        justify-content: center; /* Centra los elementos a lo largo del eje principal */
+        margin-top: 50px;
+        padding: 20px;
+        background-color: var(--bg-color);
+        color: var(--text-color);
+        height: 100%; /* Ocupa el 100% de la altura disponible */
+    }
+
+    .about-us h1 {
+        font-family: 'Kamikaze', sans-serif;
+        font-size: 4rem;
+        margin-bottom: 60px;
+    }
+
+    .about-us p {
+        font-size: var(--p-font);
+        font-family: 'VT323', italic;
+        line-height: 1.6;
+        font-size: 20px;
+        margin-bottom: 20px;
+        height: auto;
+    }   
+
+    model-viewer {
+        width: 100%;
+        height: 300px;
+        margin-bottom: 10px;
+    } 
+
+    /* Open button */
+    .trigger {
+        background: #000000;
+        outline: 0;
+        padding: 8px 15px;
+        color: #fff;
+        border: 0;
+        border-radius: 5px;
+        font-size: 5rem;
+        border-radius: 10px;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
+        transition: 0.15s ease-in-out;
+        cursor: pointer;
+        margin-bottom: 2rem;
+    }
+    .trigger:hover {
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+    }
+
+    /* Nav position and opening class */
+    .full-screen-nav {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        transition: 0.2s ease-in-out;
+        display: none;
+    }
+
+    .open-nav {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* Logo content container */
+    .logo-content-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        width: 100%; /* Asegura que el contenedor ocupe todo el ancho */
+        gap: 3rem;
+        padding: 1rem; /* Asegura que haya espacio en los bordes en móviles */
+        text-align: center;
+    }
+
+    .logo {
+        flex: 1; /* Ocupa espacio en la parte superior */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .logo h1 {
+        font-family: 'Kamikaze3DGradient', fallback; /* Reemplaza 'fallback' con la fuente de respaldo que desees usar */
+        font-size: 14rem; /* Ajusta el tamaño de la fuente del logo */
+        text-transform: uppercase; /* Convierte el texto a mayúsculas */
+        color: #ffffff; /* Cambia el color del texto a blanco */
+        background: linear-gradient(to right, #0c0c0c, #242428); /* Agrega un degradado de color al fondo del texto */
+        -webkit-background-clip: text; /* Permite que el degradado de color se aplique solo al texto */
+        background-clip: text; /* Define el recorte del fondo solo para el texto */
+        -webkit-text-fill-color: transparent; /* Hace que el texto sea transparente para que se muestre el degradado de color */
+        word-break: break-word; /* Permite que las palabras se rompan si son muy largas */
+        margin: 0;
+    }
+
+    .logo h2 {
+        font-size: 4rem;
+    }
+
+    .button-container {
+        flex: 1; /* Ocupa espacio en el medio */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .footer-main {
+        flex: 1; /* Ocupa espacio en la parte inferior */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        text-align: center;
+        background-color: #000000;
+        color: #ffffff;
+        padding: 1rem;
+    }
+
+    /* Backdrop position and animation */
+    .backdrop {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.92);
+        cursor: pointer;
+        animation: fadeIn 0.8s ease-in-out forwards;
+    }
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+
+    /* List item styling & animation */
+    ul {
+        z-index: 9999;
+        position: relative;
+        padding: 1rem; /* Asegura que haya espacio en los bordes en móviles */
+        font-size: 2rem;
+    }
+    ul li {
+        list-style: none;
+        text-align: center;
+        margin-bottom: 30px;
+        animation: 1s ease-in-out animateList forwards;
+    }
+    ul li:last-child {
+        margin-bottom: 0;
+    }
+    @keyframes animateList {
+        from {
+            margin-top: -60px;
+            opacity: 0;
+        }
+        to {
+            margin-top: 0;
+            opacity: 1;
+        }
+    }
+
+    /* Item links styles and hover effect */
+    ul li a {
+        text-decoration: none;
+        color: #ccc;
+        font-size: 2em;
+        font-weight: 900;
+        text-transform: uppercase;
+        transition: 0.40s ease-in-out;
+    }
+    ul li a:hover,
+    ul li a i {
+        color: #ffffff;
+    }
+
+    /* Responsive design */
+
+
+    .goback {
+        background-color: #1f1f1f; /* Color de fondo */
+        border: none; /* Sin bordes */
+        color: white; /* Color del texto */
+        padding: 15px 32px; /* Espaciado interno */
+        text-align: center; /* Alineación del texto */
+        text-decoration: none; /* Sin decoración de texto */
+        display: inline-block; /* Display inline-block */
+        font-size: 16px; /* Tamaño de la fuente */
+        margin: 4px 2px; /* Margen */
+        cursor: pointer; /* Cursor de mano al pasar el ratón */
+        transition-duration: 0.4s; /* Duración de la transición */
+        padding: 10px 20px; /* Reduce el padding aquí */
+        font-size: 14px; /* Reduce el tamaño de la fuente aquí */
+        height: 100%; /* Ocupa el 100% de la altura disponible */
+    }
+
+    .goback:hover {
+        background-color: #000000; /* Color de fondo al pasar el ratón */
+    }
+    .goback {
+        position: relative; /* Posición fija */
+        bottom: 0; /* Pegado al final de la página */
+        right: 0; /* Pegado al lado derecho de la página */
+        background-color: #1f1f1f; /* Color de fondo */
+        text-align: center; /* Alineación del texto */
+        text-decoration: none; /* Sin decoración de texto */
+        height: 100%; /* Ocupa el 100% de la altura disponible */
+    }
+    .testimonials-grid {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr); /* En pantallas pequeñas, solo muestra una columna */
+        gap: 20px;
+        padding: 20px;
+        height: 100%; /* Ocupa el 100% de la altura disponible */
+    }
+
+    @media (min-width: 600px) {
+        .testimonials-grid {
+            grid-template-columns: repeat(2, 1fr); /* En pantallas medianas, muestra dos columnas */
+        }
+    }
+
+    @media (min-width: 900px) {
+        .testimonials-grid {
+            grid-template-columns: repeat(4, 1fr); /* En pantallas grandes, muestra tres columnas */
+        }
+    }
+
+    .testimonials-grid {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        overflow: hidden; /* Oculta las tarjetas que no están en el centro */
+    }
+
+
+    .testimonial-card img {
+        width: 500px; /* Ajusta el ancho de la imagen al ancho de la tarjeta */
+        height: auto; /* Permite que la altura se ajuste automáticamente para mantener las proporciones de la imagen */
+    }
+
+    .testimonial-card p {
+        font-size: 3rem; /* Ajusta el tamaño del texto */
+        padding: 20px; /* Añade espacio alrededor del texto */
+        text-align: center; /* Centra el texto */
+        height: 100%; /* Ocupa el 100% de la altura disponible */
+    }
+
+    .testimonial-card {
+        transition: transform 1s; /* Añade una transición para la transformación */
+    }
+
+    @media (max-width: 600px) {
+        body {
+            margin-top: 20px; /* Añade un margen en la parte superior */
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between; /* Distribuye el espacio de manera uniforme entre los elementos */
+            min-height: 100vh; /* Asegura que el cuerpo de la página tenga al menos la altura de la ventana del navegador */
+        }
+    }
+
+    @media (max-width: 600px) {
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between; /* Distribuye el espacio de manera uniforme entre los elementos */
+            height: 100vh; /* Asegura que el cuerpo de la página tenga al menos la altura de la ventana del navegador */
+        }
+    }
