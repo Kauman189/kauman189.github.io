@@ -15,55 +15,54 @@
         margin: 0;
         padding: 0;
         font-family: 'VT323', monospace;
-        box-sizing: border-box; /* Asegura que el padding y border se incluyan en el tamaño total */
+        box-sizing: border-box;
     }
+
     body {
         font-family: 'VT323', monospace;
         background: #d9d9db;
         display: flex;
         flex-direction: column;
         align-items: center;
-        font-size: 14px;
+        font-size: 2rem;
         position: relative;
         width: 100%;
         text-align: center;
         box-sizing: border-box;
-        height: 100vh; /* Set the height to 100% of the viewport height */
-        margin: 0; /* Remove default margin */
+        height: 100vh;
+        margin: 0;
     }
-
 
     .about-us {
         display: flex;
         flex-direction: column;
-        justify-content: center; /* Centra los elementos a lo largo del eje principal */
-        margin-top: 50px;
+        justify-content: center;
         padding: 20px;
         background-color: var(--bg-color);
         color: var(--text-color);
-        height: 100%; /* Ocupa el 100% de la altura disponible */
+        height: 100%;
     }
 
     .about-us h1 {
         font-family: 'Kamikaze', sans-serif;
         font-size: 4rem;
-        margin-bottom: 60px;
+        margin-bottom: 20px;
     }
 
     .about-us p {
         font-size: var(--p-font);
         font-family: 'VT323', italic;
         line-height: 1.6;
-        font-size: 20px;
-        margin-bottom: 20px;
+        font-size: 1rem;
+        margin-bottom: 15px;
         height: auto;
-    }   
+    }
 
     model-viewer {
         width: 100%;
-        height: 300px;
+        height: 200px;
         margin-bottom: 10px;
-    } 
+    }
 
     /* Open button */
     .trigger {
@@ -73,13 +72,14 @@
         color: #fff;
         border: 0;
         border-radius: 5px;
-        font-size: 5rem;
+        font-size: 2rem;
         border-radius: 10px;
         box-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
         transition: 0.15s ease-in-out;
         cursor: pointer;
         margin-bottom: 2rem;
     }
+
     .trigger:hover {
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
     }
@@ -108,14 +108,13 @@
         justify-content: center;
         align-items: center;
         height: 100vh;
-        width: 100%; /* Asegura que el contenedor ocupe todo el ancho */
-        gap: 3rem;
-        padding: 1rem; /* Asegura que haya espacio en los bordes en móviles */
+        width: 100%;
+        padding: 1rem;
         text-align: center;
     }
 
     .logo {
-        flex: 1; /* Ocupa espacio en la parte superior */
+        flex: 1;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -123,31 +122,35 @@
     }
 
     .logo h1 {
-        font-family: 'Kamikaze3DGradient', fallback; /* Reemplaza 'fallback' con la fuente de respaldo que desees usar */
-        font-size: 14rem; /* Ajusta el tamaño de la fuente del logo */
-        text-transform: uppercase; /* Convierte el texto a mayúsculas */
-        color: #ffffff; /* Cambia el color del texto a blanco */
-        background: linear-gradient(to right, #0c0c0c, #242428); /* Agrega un degradado de color al fondo del texto */
-        -webkit-background-clip: text; /* Permite que el degradado de color se aplique solo al texto */
-        background-clip: text; /* Define el recorte del fondo solo para el texto */
-        -webkit-text-fill-color: transparent; /* Hace que el texto sea transparente para que se muestre el degradado de color */
-        word-break: break-word; /* Permite que las palabras se rompan si son muy largas */
+        font-family: 'Kamikaze3DGradient', fallback;
+        font-size: 7rem;
+        text-transform: uppercase;
+        color: #ffffff;
+        background: linear-gradient(to right, #0c0c0c, #242428);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        word-break: break-word;
         margin: 0;
     }
 
     .logo h2 {
-        font-size: 4rem;
+        font-size: 2rem;
     }
 
     .button-container {
-        flex: 1; /* Ocupa espacio en el medio */
+        flex: 1;
         display: flex;
         justify-content: center;
         align-items: center;
     }
 
-    .footer-main {
-        flex: 1; /* Ocupa espacio en la parte inferior */
+    .footer p{
+        font-size: 1rem;
+    }
+
+    .footer-main p{
+        flex: 1;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -156,7 +159,7 @@
         text-align: center;
         background-color: #000000;
         color: #ffffff;
-        padding: 1rem;
+        padding: 0.2rem;
     }
 
     /* Backdrop position and animation */
@@ -170,6 +173,7 @@
         cursor: pointer;
         animation: fadeIn 0.8s ease-in-out forwards;
     }
+
     @keyframes fadeIn {
         from {
             opacity: 0;
@@ -183,18 +187,21 @@
     ul {
         z-index: 9999;
         position: relative;
-        padding: 1rem; /* Asegura que haya espacio en los bordes en móviles */
-        font-size: 2rem;
+        padding: 1rem;
+        font-size: 1rem;
     }
+
     ul li {
         list-style: none;
         text-align: center;
         margin-bottom: 30px;
         animation: 1s ease-in-out animateList forwards;
     }
+
     ul li:last-child {
         margin-bottom: 0;
     }
+
     @keyframes animateList {
         from {
             margin-top: -60px;
@@ -212,9 +219,8 @@
         color: #ccc;
         font-size: 2em;
         font-weight: 900;
-        text-transform: uppercase;
-        transition: 0.40s ease-in-out;
     }
+
     ul li a:hover,
     ul li a i {
         color: #ffffff;
@@ -222,53 +228,46 @@
 
     /* Responsive design */
 
-
     .goback {
-        background-color: #1f1f1f; /* Color de fondo */
-        border: none; /* Sin bordes */
-        color: white; /* Color del texto */
-        padding: 15px 32px; /* Espaciado interno */
-        text-align: center; /* Alineación del texto */
-        text-decoration: none; /* Sin decoración de texto */
-        display: inline-block; /* Display inline-block */
-        font-size: 16px; /* Tamaño de la fuente */
-        margin: 4px 2px; /* Margen */
-        cursor: pointer; /* Cursor de mano al pasar el ratón */
-        transition-duration: 0.4s; /* Duración de la transición */
-        padding: 10px 20px; /* Reduce el padding aquí */
-        font-size: 14px; /* Reduce el tamaño de la fuente aquí */
-        height: 100%; /* Ocupa el 100% de la altura disponible */
+        background-color: #1f1f1f;
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+        transition-duration: 0.4s;
+        padding: 10px 20px;
+        font-size: 14px;
+        height: 100%;
     }
 
     .goback:hover {
-        background-color: #000000; /* Color de fondo al pasar el ratón */
+        background-color: #000000;
     }
+
     .goback {
-        position: relative; /* Posición fija */
-        bottom: 0; /* Pegado al final de la página */
-        right: 0; /* Pegado al lado derecho de la página */
-        background-color: #1f1f1f; /* Color de fondo */
-        text-align: center; /* Alineación del texto */
-        text-decoration: none; /* Sin decoración de texto */
-        height: 100%; /* Ocupa el 100% de la altura disponible */
-    }
-    .testimonials-grid {
-        display: grid;
-        grid-template-columns: repeat(1, 1fr); /* En pantallas pequeñas, solo muestra una columna */
-        gap: 20px;
-        padding: 20px;
-        height: 100%; /* Ocupa el 100% de la altura disponible */
+        position: relative;
+        bottom: 0;
+        right: 0;
+        background-color: #1f1f1f;
+        text-align: center;
+        text-decoration: none;
+        height: 100%;
     }
 
     @media (min-width: 600px) {
         .testimonials-grid {
-            grid-template-columns: repeat(2, 1fr); /* En pantallas medianas, muestra dos columnas */
+            grid-template-columns: repeat(2, 1fr);
         }
     }
 
     @media (min-width: 900px) {
         .testimonials-grid {
-            grid-template-columns: repeat(4, 1fr); /* En pantallas grandes, muestra tres columnas */
+            grid-template-columns: repeat(4, 1fr);
         }
     }
 
@@ -276,34 +275,69 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
-        overflow: hidden; /* Oculta las tarjetas que no están en el centro */
+        overflow: hidden;
     }
 
-
     .testimonial-card img {
-        width: 500px; /* Ajusta el ancho de la imagen al ancho de la tarjeta */
-        height: auto; /* Permite que la altura se ajuste automáticamente para mantener las proporciones de la imagen */
+        margin-top: 10px;
+        width: 60vh;
+        height: auto;
     }
 
     .testimonial-card p {
-        font-size: 3rem; /* Ajusta el tamaño del texto */
-        padding: 20px; /* Añade espacio alrededor del texto */
-        text-align: center; /* Centra el texto */
-        height: 100%; /* Ocupa el 100% de la altura disponible */
+        font-size: 2rem;
+        text-align: center;
+        padding: 20px;
+        height: 100%;
     }
 
     .testimonial-card {
-        transition: transform 1s; /* Añade una transición para la transformación */
+        transition: transform 1s;
     }
 
-       /* Estilos para dispositivos móviles */
-       @media (min-width: 800px) {
-        body {
-            font-size: 12px; /* Reduce el tamaño de la fuente */
-            padding: 10px; /* Reduce el relleno */
-        }
+    .quote{
+        font-size: 1rem;
+        margin-bottom: 20px;
+    }
 
-        .goback{
-            font-size: 3rem; /* Reduce el tamaño del botón */
-        }        
+    .contact-container {
+        margin:  auto;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .contact-container h1 {
+        color: #000000;
+        font-size: 7rem;
+    }
+
+    .contact-container p {
+        color: #7e7e7e;
+        font-size: 1rem;
+    }
+
+    .contact-card {
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .contact-card ul {
+        list-style-type: none;
+        padding: 0;
+    }
+
+    .contact-card ul li {
+        color: #333;
+        font-size: 1.5rem;
+        margin: 10px 0;
+    }
+
+    .map-container {
+        margin-top: 20px;
     }
