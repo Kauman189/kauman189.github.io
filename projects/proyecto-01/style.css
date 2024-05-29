@@ -82,8 +82,8 @@ body {
   display: block;
   place-content: center;
   margin: 0 auto;
-  width: 300px;
-  height: 100px; /* Add a height */
+  width: 200px;
+  height: 130px; /* Add a height */
   border-radius: 4px;
 }
 
